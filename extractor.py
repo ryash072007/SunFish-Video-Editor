@@ -34,9 +34,9 @@ def extract_every_x_frames(x: int, video: VideoClip) -> list:
     frames = []
     i = 0
     for frame in video.iter_frames():
-        i += 1
         if i % x != 0:
             continue
+        i += 1
         frames.append(frame)
         if debug:
             save_image = Image.fromarray(frame)

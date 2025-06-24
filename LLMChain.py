@@ -77,12 +77,6 @@ class ImageGroqLink(BaseLLMLink):
             stream=False
         )
 
-        print("_______________________")
-        print(chat_completion.choices[0])
-        print("_______________________")
-
-
-
         response_message = chat_completion.choices[0].message
 
         if self.use_memory:
