@@ -7,7 +7,7 @@ import os
 from dotenv import load_dotenv
 import io
 
-debug = True
+debug = False
 
 def frame_to_base64(frame: np.ndarray) -> str:
     """
@@ -52,6 +52,7 @@ frames = extract_every_x_frames(int(clip.fps // 2), clip)
 load_dotenv()
 logging.basicConfig(level=logging.INFO)
 
+
 client = Groq(
     api_key=os.environ.get("GROQ_API_KEY"),
 )
@@ -61,7 +62,7 @@ sys_prompt = open("image_sys_prompt.txt").read()
 bot = LLMChain(
     "sunfish-v0",
     [
-        ImageGroqLink(client, sys_prompt)
+        ImageGroqLink(client, sys_prompt, _use_memory=True, _memory_size = 3)
     ]
 )
 
@@ -69,8 +70,8 @@ bot = LLMChain(
 file = open("descriptions.txt", "w")
 
 for frame in frames:
-    result = bot.forward(frame_to_base64(frame))
-    file.write(result)
+    result: str = bot.forward(frame_to_base64(frame))
+    file.write(result.replace("\n", ""))
     file.write("\n\n")
 
 file.close()

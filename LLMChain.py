@@ -1,10 +1,23 @@
-from groq import Groq
+import time
+from groq import Groq, APIStatusError
 import logging
 import types
 import json
+import re
+
 
 logger = logging.getLogger(__name__)
 
+def parse_duration(s: str) -> float:
+    # matches e.g. "2m59.56s", "7.66s", "1h2m3s"
+    parts = re.findall(r"(\d+\.?\d*)([hms])", s)
+    sec = 0.0
+    for val, unit in parts:
+        f = float(val)
+        if unit == "h": sec += f * 3600
+        if unit == "m": sec += f * 60
+        if unit == "s": sec += f
+    return sec
 
 class BaseLLMLink:
     def __init__(self):
@@ -43,7 +56,7 @@ class ImageGroqLink(BaseLLMLink):
     def forward(self, _image_b64: str) -> str:
         if _image_b64 is None:
             return None
-
+        
         message_to_send: dict = {
             "role": "user",
             "content": [
@@ -58,11 +71,20 @@ class ImageGroqLink(BaseLLMLink):
 
         send_messages: list = self.memory + [message_to_send]
 
-        chat_completion = self.client.chat.completions.create(
-            messages=send_messages,
-            model=self.model,
-            stream=False
-        )
+        try:
+            chat_completion = self.client.chat.completions.create(
+                messages=send_messages,
+                model=self.model,
+                stream=False
+            )
+        except APIStatusError as e:
+            if e.status_code == 429:
+                reset_req = e.response.headers.get("x-ratelimit-reset-requests")
+                wait_sec = parse_duration(reset_req)
+                print(f"Sleepin for {wait_sec}s")
+                time.sleep(wait_sec)
+                self.forward(_image_b64)
+
 
         response_message = chat_completion.choices[0].message
 
