@@ -73,5 +73,6 @@ for frame in frames:
     result: str = bot.forward(frame_to_base64(frame))
     file.write(result.replace("\n", ""))
     file.write("\n\n")
+    time.sleep(1)
 
 file.close()
