@@ -43,10 +43,11 @@ def extract_every_x_frames(x: int, video: VideoClip) -> list:
             save_image.save(f"temp/image_{i*x}.jpg")
     return frames
 
+
 video_path = "video.mp4"
 clip = VideoFileClip(video_path)
 
-frames = extract_every_x_frames(15, clip)
+frames = extract_every_x_frames(int(clip.fps // 2), clip)
 
 load_dotenv()
 logging.basicConfig(level=logging.INFO)
@@ -64,6 +65,12 @@ bot = LLMChain(
     ]
 )
 
-for frame in frames[:1]:
+
+file = open("descriptions.txt", "w")
+
+for frame in frames:
     result = bot.forward(frame_to_base64(frame))
-    print(result)
+    file.write(result)
+    file.write("\n\n")
+
+file.close()

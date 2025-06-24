@@ -15,12 +15,30 @@ class ImageGroqLink(BaseLLMLink):
     def __init__(
         self,
         _client: Groq,
-        _system_prompt: str,
+        _system_prompt: str = None,
         _model: str = "meta-llama/llama-4-scout-17b-16e-instruct",
+        _use_memory: bool = False,
+        _memory_size: int = None,
     ):
         self.client: Groq = _client
         self.model: str = _model
         self.system_prompt = _system_prompt
+
+        self.use_memory: bool = _use_memory
+        self.memory_size: int = _memory_size
+
+        self.memory: list = []
+        if self.system_prompt:
+            self.memory.append({"role": "system", "content": self.system_prompt})
+
+        if not self.use_memory and _memory_size is not None:
+            logger.warning(
+                "You should not specify memory_size when use_memory is False."
+            )
+        elif self.use_memory and _memory_size is None:
+            logger.warning(
+                "Using memory but memory_size is not specified. Memory will increase and indefinetely and could hit rate limits fast."
+            )
 
     def forward(self, _image_b64: str) -> str:
         if _image_b64 is None:
@@ -29,7 +47,6 @@ class ImageGroqLink(BaseLLMLink):
         message_to_send: dict = {
             "role": "user",
             "content": [
-                {"type": "text", "text": self.system_prompt},
                 {
                     "type": "image_url",
                     "image_url": {
@@ -39,12 +56,24 @@ class ImageGroqLink(BaseLLMLink):
             ],
         }
 
+        send_messages: list = self.memory + [message_to_send]
+
         chat_completion = self.client.chat.completions.create(
-            messages=[message_to_send],
-            model=self.model
+            messages=send_messages,
+            model=self.model,
+            stream=False
         )
 
-        return chat_completion.choices[0].message.content
+        response_message = chat_completion.choices[0].message
+
+        if self.use_memory:
+            self.memory.extend([message_to_send, response_message])
+            if self.memory_size is not None:
+                size_diff: int = len(self.memory) - self.memory_size
+                if size_diff > 0:
+                    del self.memory[1 : 1 + size_diff]
+
+        return response_message.content
         
 
 class AudioGroqLink(BaseLLMLink):
