@@ -71,20 +71,11 @@ class ImageGroqLink(BaseLLMLink):
 
         send_messages: list = self.memory + [message_to_send]
 
-        try:
-            chat_completion = self.client.chat.completions.create(
-                messages=send_messages,
-                model=self.model,
-                stream=False
-            )
-        except APIStatusError as e:
-            if e.status_code == 429:
-                reset_req = e.response.headers.get("x-ratelimit-reset-requests")
-                wait_sec = parse_duration(reset_req)
-                print(f"Sleepin for {wait_sec}s")
-                time.sleep(wait_sec)
-                self.forward(_image_b64)
-
+        chat_completion = self.client.chat.completions.create(
+            messages=send_messages,
+            model=self.model,
+            stream=False
+        )
 
         response_message = chat_completion.choices[0].message
 

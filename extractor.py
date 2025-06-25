@@ -34,9 +34,9 @@ def extract_every_x_frames(x: int, video: VideoClip) -> list:
     frames = []
     i = 0
     for frame in video.iter_frames():
-        i += 1
         if i % x != 0:
             continue
+        i += 1
         frames.append(frame)
         if debug:
             save_image = Image.fromarray(frame)
@@ -73,5 +73,6 @@ for frame in frames:
     result: str = bot.forward(frame_to_base64(frame))
     file.write(result.replace("\n", ""))
     file.write("\n\n")
+    time.sleep(1)
 
 file.close()
