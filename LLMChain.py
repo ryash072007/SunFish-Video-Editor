@@ -1,23 +1,12 @@
-import time
-from groq import Groq, APIStatusError
+from groq import Groq
+from google import genai
 import logging
 import types
 import json
-import re
 
 
 logger = logging.getLogger(__name__)
 
-def parse_duration(s: str) -> float:
-    # matches e.g. "2m59.56s", "7.66s", "1h2m3s"
-    parts = re.findall(r"(\d+\.?\d*)([hms])", s)
-    sec = 0.0
-    for val, unit in parts:
-        f = float(val)
-        if unit == "h": sec += f * 3600
-        if unit == "m": sec += f * 60
-        if unit == "s": sec += f
-    return sec
 
 class BaseLLMLink:
     def __init__(self):
@@ -121,12 +110,16 @@ class LLMChain(BaseLLMLink):
 
         super().__init__()
 
-    def forward(self, prompt):
+    def forward(self, prompt, vid_path=None):
         logger.info(f"Starting generation for LLM Chain: {self.name}")
         self.next_layer_input = prompt
         for idx, link in enumerate(self.llm_links):
             logger.info(f"Processing link at idx: {idx}")
-            if isinstance(link, BaseLLMLink):
+            if isinstance(link, VideoGeminiLink):
+                if vid_path is None:
+                    logger.error(f"No video passed but LLMChain has VideoGeminiLink")
+                self.next_layer_input = link.forward(self.next_layer_input, vid_path)
+            elif isinstance(link, BaseLLMLink):
                 self.next_layer_input = link.forward(self.next_layer_input)
             elif isinstance(link, types.FunctionType):
                 self.next_layer_input = link(self.next_layer_input)
@@ -265,6 +258,49 @@ class JSONGroqLink(TextGroqLink):
                     del self.memory[1 : 1 + size_diff]
 
         return json.loads(response_message.content)
+
+
+class VideoGeminiLink(BaseLLMLink):
+    def __init__(
+        self,
+        _client: genai.Client,
+        _model: str,
+        _system_prompt: str = None,
+        # _use_memory: bool = False,
+        # _memory_size: int = None,
+    ):
+        self.client: genai.Client = _client
+        self.model: str = _model
+        self.system_prompt: str = _system_prompt
+
+        logger.info(f"VideoGeminiLink System prompt: {_system_prompt}")
+
+        # self.use_memory: bool = _use_memory
+        # self.memory_size: int = _memory_size
+
+        self.memory: list = []
+        if self.system_prompt:
+            self.memory.append({"role": "system", "content": self.system_prompt})
+
+        # if not self.use_memory and _memory_size is not None:
+        #     logger.warning(
+        #         "You should not specify memory_size when use_memory is False."
+        #     )
+        # elif self.use_memory and _memory_size is None:
+        #     logger.warning(
+        #         "Using memory but memory_size is not specified. Memory will increase and indefinetely and could hit rate limits fast."
+        #     )
+    
+    def forward(self, _prompt: str, _video_path: str):
+        logger.info(f"VideoGeminiLink PROMPT: {_prompt}")
+
+        vid_file = self.client.files.upload(file=_video_path)
+
+        response = client.models.generate_content(model=self.model, contents=[vid_file, _prompt], config=genai.types.GenerateContentConfig(system_instruction=self.system_prompt))
+
+        self.client.files.delete(vid_file.name)
+
+        return response.text
 
 
 if __name__ == "__main__":
