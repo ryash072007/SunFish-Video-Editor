@@ -30,8 +30,8 @@ messages = [
     {
         "role": "user",
         "content": [
-            {"type": "image", "path": "CHANGE"},
-            {"type": "text", "text": "Describe this image."}
+            {"type": "image", "path": "pfp.jpg"},
+            {"type": "text", "text": "Describe this image in detail."}
         ]
     }
 ]
