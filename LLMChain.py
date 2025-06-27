@@ -1,3 +1,4 @@
+import time
 from groq import Groq
 from google import genai
 import logging
@@ -45,7 +46,7 @@ class ImageGroqLink(BaseLLMLink):
     def forward(self, _image_b64: str) -> str:
         if _image_b64 is None:
             return None
-        
+
         message_to_send: dict = {
             "role": "user",
             "content": [
@@ -61,9 +62,7 @@ class ImageGroqLink(BaseLLMLink):
         send_messages: list = self.memory + [message_to_send]
 
         chat_completion = self.client.chat.completions.create(
-            messages=send_messages,
-            model=self.model,
-            stream=False
+            messages=send_messages, model=self.model, stream=False
         )
 
         response_message = chat_completion.choices[0].message
@@ -76,7 +75,7 @@ class ImageGroqLink(BaseLLMLink):
                     del self.memory[1 : 1 + size_diff]
 
         return response_message.content
-        
+
 
 class AudioGroqLink(BaseLLMLink):
     def __init__(
@@ -94,10 +93,7 @@ class AudioGroqLink(BaseLLMLink):
 
         with open(_wav_file, "rb") as file:
             transcription = self.client.audio.transcriptions.create(
-                file=file,
-                model=self.model,
-                language="en",
-                temperature=0.3
+                file=file, model=self.model, language="en", temperature=0.3
             )
             return transcription.text
 
@@ -290,15 +286,27 @@ class VideoGeminiLink(BaseLLMLink):
         #     logger.warning(
         #         "Using memory but memory_size is not specified. Memory will increase and indefinetely and could hit rate limits fast."
         #     )
-    
+
     def forward(self, _prompt: str, _video_path: str):
         logger.info(f"VideoGeminiLink PROMPT: {_prompt}")
 
         vid_file = self.client.files.upload(file=_video_path)
+        while vid_file.state.name == "PROCESSING":
+            logger.info("Waiting for video processing…")
+            time.sleep(5)
+            vid_file = self.client.files.get(name=vid_file.name)
+        if vid_file.state.name != "ACTIVE":
+            logger.error(f"Video file failed with state {vid_file.state.name}")
 
-        response = client.models.generate_content(model=self.model, contents=[vid_file, _prompt], config=genai.types.GenerateContentConfig(system_instruction=self.system_prompt))
+        response = self.client.models.generate_content(
+            model=self.model,
+            contents=[vid_file, _prompt],
+            config=genai.types.GenerateContentConfig(
+                system_instruction=self.system_prompt
+            ),
+        )
 
-        self.client.files.delete(vid_file.name)
+        self.client.files.delete(name=vid_file.name)
 
         return response.text
 
