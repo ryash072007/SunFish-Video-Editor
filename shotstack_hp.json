@@ -1,0 +1,1361 @@
+{
+    "timeline": {
+        "background": "#000000",
+        "tracks": [
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://cdn.shotstack.io/au/v1/26f09278-f716-43b2-9a00-5415c898c639.mp4"
+                        },
+                        "start": 0,
+                        "length": 3.7,
+                        "fit": "cover",
+                        "clip": {
+                            "in": 0,
+                            "out": 3.7
+                        },
+                        "transition": {
+                            "in": "fade"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://cdn.shotstack.io/au/v1/26f09278-f716-43b2-9a00-5415c898c639.mp4"
+                        },
+                        "start": 3.7,
+                        "length": 1.8,
+                        "fit": "cover",
+                        "clip": {
+                            "in": 3.7,
+                            "out": 5.5
+                        },
+                        "transition": {
+                            "in": "slideRight"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://cdn.shotstack.io/au/v1/26f09278-f716-43b2-9a00-5415c898c639.mp4"
+                        },
+                        "start": 5.5,
+                        "length": 4,
+                        "fit": "cover",
+                        "clip": {
+                            "in": 5.5,
+                            "out": 9.5
+                        },
+                        "transition": {
+                            "in": "slideLeft"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://cdn.shotstack.io/au/v1/26f09278-f716-43b2-9a00-5415c898c639.mp4"
+                        },
+                        "start": 9.5,
+                        "length": 3.5,
+                        "fit": "cover",
+                        "clip": {
+                            "in": 9.5,
+                            "out": 13
+                        },
+                        "transition": {
+                            "in": "fade"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://cdn.shotstack.io/au/v1/26f09278-f716-43b2-9a00-5415c898c639.mp4"
+                        },
+                        "start": 13,
+                        "length": 5,
+                        "fit": "cover",
+                        "clip": {
+                            "in": 13,
+                            "out": 18
+                        },
+                        "transition": {
+                            "in": "slideRight"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://cdn.shotstack.io/au/v1/26f09278-f716-43b2-9a00-5415c898c639.mp4"
+                        },
+                        "start": 18,
+                        "length": 4.5,
+                        "fit": "cover",
+                        "clip": {
+                            "in": 18,
+                            "out": 22.5
+                        },
+                        "transition": {
+                            "in": "fade"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://cdn.shotstack.io/au/v1/26f09278-f716-43b2-9a00-5415c898c639.mp4"
+                        },
+                        "start": 22.5,
+                        "length": 3.5,
+                        "fit": "cover",
+                        "clip": {
+                            "in": 22.5,
+                            "out": 26
+                        },
+                        "transition": {
+                            "in": "slideLeft"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://cdn.shotstack.io/au/v1/26f09278-f716-43b2-9a00-5415c898c639.mp4"
+                        },
+                        "start": 26,
+                        "length": 4,
+                        "fit": "cover",
+                        "clip": {
+                            "in": 26,
+                            "out": 30
+                        },
+                        "transition": {
+                            "in": "fade"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://cdn.shotstack.io/au/v1/26f09278-f716-43b2-9a00-5415c898c639.mp4"
+                        },
+                        "start": 30,
+                        "length": 3,
+                        "fit": "cover",
+                        "clip": {
+                            "in": 30,
+                            "out": 33
+                        },
+                        "transition": {
+                            "in": "slideRight"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://cdn.shotstack.io/au/v1/26f09278-f716-43b2-9a00-5415c898c639.mp4"
+                        },
+                        "start": 33,
+                        "length": 3,
+                        "fit": "cover",
+                        "clip": {
+                            "in": 33,
+                            "out": 36
+                        },
+                        "transition": {
+                            "in": "fade"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://cdn.shotstack.io/au/v1/26f09278-f716-43b2-9a00-5415c898c639.mp4"
+                        },
+                        "start": 36,
+                        "length": 1,
+                        "fit": "cover",
+                        "clip": {
+                            "in": 36,
+                            "out": 37
+                        },
+                        "transition": {
+                            "in": "slideLeft"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://cdn.shotstack.io/au/v1/26f09278-f716-43b2-9a00-5415c898c639.mp4"
+                        },
+                        "start": 37,
+                        "length": 2,
+                        "fit": "cover",
+                        "clip": {
+                            "in": 37,
+                            "out": 39
+                        },
+                        "transition": {
+                            "in": "fade"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://cdn.shotstack.io/au/v1/26f09278-f716-43b2-9a00-5415c898c639.mp4"
+                        },
+                        "start": 39,
+                        "length": 2.5,
+                        "fit": "cover",
+                        "clip": {
+                            "in": 39,
+                            "out": 41.5
+                        },
+                        "transition": {
+                            "in": "slideRight"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://cdn.shotstack.io/au/v1/26f09278-f716-43b2-9a00-5415c898c639.mp4"
+                        },
+                        "start": 41.5,
+                        "length": 1.5,
+                        "fit": "cover",
+                        "clip": {
+                            "in": 41.5,
+                            "out": 43
+                        },
+                        "transition": {
+                            "in": "fade"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://cdn.shotstack.io/au/v1/26f09278-f716-43b2-9a00-5415c898c639.mp4"
+                        },
+                        "start": 43,
+                        "length": 3,
+                        "fit": "cover",
+                        "clip": {
+                            "in": 43,
+                            "out": 46
+                        },
+                        "transition": {
+                            "in": "slideLeft"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://cdn.shotstack.io/au/v1/26f09278-f716-43b2-9a00-5415c898c639.mp4"
+                        },
+                        "start": 46,
+                        "length": 1.5,
+                        "fit": "cover",
+                        "clip": {
+                            "in": 46,
+                            "out": 47.5
+                        },
+                        "transition": {
+                            "in": "fade"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://cdn.shotstack.io/au/v1/26f09278-f716-43b2-9a00-5415c898c639.mp4"
+                        },
+                        "start": 47.5,
+                        "length": 3,
+                        "fit": "cover",
+                        "clip": {
+                            "in": 47.5,
+                            "out": 50.5
+                        },
+                        "transition": {
+                            "in": "slideRight"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://cdn.shotstack.io/au/v1/26f09278-f716-43b2-9a00-5415c898c639.mp4"
+                        },
+                        "start": 50.5,
+                        "length": 2.5,
+                        "fit": "cover",
+                        "clip": {
+                            "in": 50.5,
+                            "out": 53
+                        },
+                        "transition": {
+                            "in": "fade"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "video",
+                            "src": "https://cdn.shotstack.io/au/v1/26f09278-f716-43b2-9a00-5415c898c639.mp4"
+                        },
+                        "start": 53,
+                        "length": 3.5,
+                        "fit": "cover",
+                        "clip": {
+                            "in": 53,
+                            "out": 56.5
+                        },
+                        "transition": {
+                            "in": "slideLeft"
+                        }
+                    }
+                ]
+            },
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "I'm going to save you",
+                            "style": "minimal"
+                        },
+                        "start": 0.5,
+                        "length": 1.5,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "30 minutes",
+                            "style": "minimal"
+                        },
+                        "start": 1.2,
+                        "length": 1.5,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.1"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "off your next workout",
+                            "style": "minimal"
+                        },
+                        "start": 2.0,
+                        "length": 1.5,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "with 3 simple tips.",
+                            "style": "minimal"
+                        },
+                        "start": 2.8,
+                        "length": 1.5,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.1"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "And it won't cost you",
+                            "style": "minimal"
+                        },
+                        "start": 4.0,
+                        "length": 1.0,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "any gains.",
+                            "style": "minimal"
+                        },
+                        "start": 4.7,
+                        "length": 1.0,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.1"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "1",
+                            "style": "minimal",
+                            "size": "xx-large"
+                        },
+                        "start": 5.8,
+                        "length": 1.0,
+                        "position": "center",
+                        "animation": {
+                            "in": "bounceIn",
+                            "out": "fadeOut"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "Stop resting between warm-up-sets",
+                            "style": "minimal"
+                        },
+                        "start": 6.8,
+                        "length": 2.5,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.1"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "Seriously.",
+                            "style": "minimal"
+                        },
+                        "start": 9.5,
+                        "length": 1.0,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.1"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "They're just warm-up sets.",
+                            "style": "minimal"
+                        },
+                        "start": 10.3,
+                        "length": 1.5,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "So, by definition",
+                            "style": "minimal"
+                        },
+                        "start": 11.2,
+                        "length": 1.2,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.1"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "they shouldn't have you",
+                            "style": "minimal"
+                        },
+                        "start": 11.8,
+                        "length": 1.2,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "anywhere close to failure.",
+                            "style": "minimal"
+                        },
+                        "start": 12.3,
+                        "length": 1.5,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.1"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "Your muscles don't",
+                            "style": "minimal"
+                        },
+                        "start": 14.0,
+                        "length": 1.2,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "Just go from",
+                            "style": "minimal"
+                        },
+                        "start": 15.0,
+                        "length": 1.0,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.1"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "one warm-up set",
+                            "style": "minimal"
+                        },
+                        "start": 16.0,
+                        "length": 1.0,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "right into another.",
+                            "style": "minimal"
+                        },
+                        "start": 17.0,
+                        "length": 1.2,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.1"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "Then start resting",
+                            "style": "minimal"
+                        },
+                        "start": 18.5,
+                        "length": 1.2,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "right before your first",
+                            "style": "minimal"
+                        },
+                        "start": 19.3,
+                        "length": 1.5,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.1"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "working set.",
+                            "style": "minimal"
+                        },
+                        "start": 20.0,
+                        "length": 1.0,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "This should save you",
+                            "style": "minimal"
+                        },
+                        "start": 20.8,
+                        "length": 1.2,
+                        "position": "top",
+                        "offset": {
+                            "y": "0.1"
+                        },
+                        "animation": {
+                            "in": "slideDown",
+                            "out": "slideUp"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "TIME SAVED",
+                            "style": "minimal",
+                            "size": "large"
+                        },
+                        "start": 21.0,
+                        "length": 1.0,
+                        "position": "center",
+                        "offset": {
+                            "y": "-0.1"
+                        },
+                        "animation": {
+                            "in": "bounceIn",
+                            "out": "fadeOut"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "10:00",
+                            "style": "minimal",
+                            "size": "xx-large"
+                        },
+                        "start": 21.2,
+                        "length": 1.5,
+                        "position": "center",
+                        "offset": {
+                            "y": "0.1"
+                        },
+                        "animation": {
+                            "in": "fadeIn",
+                            "out": "fadeOut"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "about 10 minutes",
+                            "style": "minimal"
+                        },
+                        "start": 21.8,
+                        "length": 1.0,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "across the whole workout.",
+                            "style": "minimal"
+                        },
+                        "start": 22.0,
+                        "length": 1.5,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.1"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "2",
+                            "style": "minimal",
+                            "size": "xx-large"
+                        },
+                        "start": 22.8,
+                        "length": 1.0,
+                        "position": "center",
+                        "animation": {
+                            "in": "bounceIn",
+                            "out": "fadeOut"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "Use separated supersets",
+                            "style": "minimal"
+                        },
+                        "start": 23.8,
+                        "length": 2.0,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.1"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "This is when you",
+                            "style": "minimal"
+                        },
+                        "start": 26.0,
+                        "length": 1.0,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "pair 2 exercises",
+                            "style": "minimal"
+                        },
+                        "start": 26.8,
+                        "length": 1.2,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.1"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "that target different muscles",
+                            "style": "minimal"
+                        },
+                        "start": 27.8,
+                        "length": 1.5,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "without resting",
+                            "style": "minimal"
+                        },
+                        "start": 28.8,
+                        "length": 1.0,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.1"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "in between.",
+                            "style": "minimal"
+                        },
+                        "start": 29.5,
+                        "length": 1.0,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "If you superset your",
+                            "style": "minimal"
+                        },
+                        "start": 30.5,
+                        "length": 1.0,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "tricep pressdowns",
+                            "style": "minimal"
+                        },
+                        "start": 31.0,
+                        "length": 1.2,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.1"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "with bicep curls,",
+                            "style": "minimal"
+                        },
+                        "start": 31.8,
+                        "length": 1.5,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "your biceps are curling",
+                            "style": "minimal"
+                        },
+                        "start": 33.5,
+                        "length": 1.5,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "while your triceps",
+                            "style": "minimal"
+                        },
+                        "start": 34.2,
+                        "length": 1.5,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.1"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "are resting.",
+                            "style": "minimal"
+                        },
+                        "start": 35.0,
+                        "length": 1.0,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "A new study found",
+                            "style": "minimal"
+                        },
+                        "start": 36.0,
+                        "length": 1.0,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "this reduced workout time",
+                            "style": "minimal"
+                        },
+                        "start": 37.0,
+                        "length": 1.5,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.1"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "by 25 minutes",
+                            "style": "minimal"
+                        },
+                        "start": 39.0,
+                        "length": 1.0,
+                        "position": "top",
+                        "offset": {
+                            "y": "0.1"
+                        },
+                        "animation": {
+                            "in": "slideDown",
+                            "out": "slideUp"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "TIME SAVED",
+                            "style": "minimal",
+                            "size": "large"
+                        },
+                        "start": 39.2,
+                        "length": 1.0,
+                        "position": "center",
+                        "offset": {
+                            "y": "-0.1"
+                        },
+                        "animation": {
+                            "in": "bounceIn",
+                            "out": "fadeOut"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "25:00",
+                            "style": "minimal",
+                            "size": "xx-large"
+                        },
+                        "start": 39.4,
+                        "length": 1.5,
+                        "position": "center",
+                        "offset": {
+                            "y": "0.1"
+                        },
+                        "animation": {
+                            "in": "fadeIn",
+                            "out": "fadeOut"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "without sacrificing gains!",
+                            "style": "minimal"
+                        },
+                        "start": 40.0,
+                        "length": 1.5,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "3",
+                            "style": "minimal",
+                            "size": "xx-large"
+                        },
+                        "start": 41.8,
+                        "length": 1.0,
+                        "position": "center",
+                        "animation": {
+                            "in": "bounceIn",
+                            "out": "fadeOut"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "Use dumbbells",
+                            "style": "minimal"
+                        },
+                        "start": 42.5,
+                        "length": 1.0,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.1"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "You can pick up a",
+                            "style": "minimal"
+                        },
+                        "start": 43.5,
+                        "length": 1.0,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "pair of dumbbells",
+                            "style": "minimal"
+                        },
+                        "start": 44.0,
+                        "length": 1.0,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.1"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "a lot faster",
+                            "style": "minimal"
+                        },
+                        "start": 44.8,
+                        "length": 1.0,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "than you can",
+                            "style": "minimal"
+                        },
+                        "start": 45.5,
+                        "length": 1.0,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.1"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "set up a barbell,",
+                            "style": "minimal"
+                        },
+                        "start": 46.2,
+                        "length": 1.2,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "or pick a machine,",
+                            "style": "minimal"
+                        },
+                        "start": 47.7,
+                        "length": 1.2,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "adjust it for your height",
+                            "style": "minimal"
+                        },
+                        "start": 48.5,
+                        "length": 1.5,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.1"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "and then load it up",
+                            "style": "minimal"
+                        },
+                        "start": 49.3,
+                        "length": 1.2,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "with weight.",
+                            "style": "minimal"
+                        },
+                        "start": 49.8,
+                        "length": 1.0,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.1"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "Dumbbells might not be",
+                            "style": "minimal"
+                        },
+                        "start": 50.8,
+                        "length": 1.2,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "quite as \"optimal\" as machines",
+                            "style": "minimal"
+                        },
+                        "start": 51.5,
+                        "length": 1.5,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.1"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "on some exercises",
+                            "style": "minimal"
+                        },
+                        "start": 52.2,
+                        "length": 1.2,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "but if you're",
+                            "style": "minimal"
+                        },
+                        "start": 53.5,
+                        "length": 1.0,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "limited on time,",
+                            "style": "minimal"
+                        },
+                        "start": 54.0,
+                        "length": 1.2,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.1"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    },
+                    {
+                        "asset": {
+                            "type": "title",
+                            "text": "they're definitely the way to go.",
+                            "style": "minimal"
+                        },
+                        "start": 54.8,
+                        "length": 1.5,
+                        "position": "bottom",
+                        "offset": {
+                            "y": "-0.2"
+                        },
+                        "animation": {
+                            "in": "slideUp",
+                            "out": "slideDown"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "output": {
+        "format": "mp4",
+        "size": {
+            "width": 1280,
+            "height": 720
+        }
+    }
+}

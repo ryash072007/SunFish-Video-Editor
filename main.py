@@ -27,6 +27,7 @@ result = result.strip("`json\n")
 
 try:
     result_dict = json.loads(result)
+    json.dump(result_dict, open("shotstack_hp.json", "w"))
 
     for key, value in result_dict.items():
         print(f"{key}: {value}")
