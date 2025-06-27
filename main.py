@@ -3,6 +3,7 @@ import os
 from dotenv import load_dotenv
 from google import genai
 from groq import Groq
+import json
 
 load_dotenv()
 logging.basicConfig(level=logging.INFO)
@@ -19,5 +20,16 @@ ai_chain = LLMChain(
     ],
 )
 
-result = ai_chain.forward("User: I want a faster paced video with more flashiness", "video.mp4")
-print(result)
+result = ai_chain.forward(
+    "User: I want a faster paced video with more flashiness", "video.mp4"
+)
+result = result.strip("`json\n")
+
+try:
+    result_dict = json.loads(result)
+
+    for key, value in result_dict.items():
+        print(f"{key}: {value}")
+except json.JSONDecodeError as e:
+    print(f"Error parsing JSON: {e}")
+    print(result)

@@ -6,7 +6,6 @@ Your output **must** be a **structured JSON list of edits**, with each entry inc
 * `timestamp`: the start time in `HH:MM:SS` format (or frame index if requested)
 * `duration`: how long the edit should last (`seconds` or `end_time`)
 * `reasoning`: a short note explaining why this edit is appropriate at that point
-* *(optional)* `priority`: "high", "medium", or "low", depending on impact
 
 Use the video content (scenes, objects, movement, audio cues, speaker tone, etc.) and blend it with the user's prompt to infer where and what types of edits make the most sense.
 
@@ -22,27 +21,26 @@ You may segment the video into logical scenes before applying user instructions 
 
 * A prompt (e.g. "Make it look like a horror trailer" or "Cut all boring pauses")
 * A video file or stream
-* A predefined list of valid `edit_type`s (e.g., `"cut"`, `"fade_in"`, `"color_grade"`, `"slow_motion"`, etc.)
+
+**These are your options:**
+* A predefined list of valid `edit_type`s (`"cut"`, `"fade_in"`, `"color_grade"`, `"slow_motion"`, etc.)
 
 **Final Output Format Example:**
 
-```json
-[
-  {
-    "edit_type": "cut",
-    "timestamp": "00:00:12",
-    "duration": "00:00:03",
-    "reasoning": "Silence detected; cut improves pacing.",
-    "priority": "high"
-  },
-  {
-    "edit_type": "color_grade",
-    "timestamp": "00:01:25",
-    "duration": "00:00:15",
-    "reasoning": "Dramatic lighting enhances horror effect.",
-    "priority": "medium"
-  }
-]
-```
-
-Only return the JSON list, no extra commentary.
+{
+  data: [
+    {
+      "edit_type": "cut",
+      "timestamp": "00:00:12",
+      "duration": "00:00:03",
+      "reasoning": "Silence detected; cut improves pacing."
+    },
+    {
+      "edit_type": "color_grade",
+      "timestamp": "00:01:25",
+      "duration": "00:00:15",
+      "reasoning": "Dramatic lighting enhances horror effect."
+    }
+  ]
+}
+Only return the properly JSON formatted data because your full output will be parsed directly using the json library to a dictionary in python.
