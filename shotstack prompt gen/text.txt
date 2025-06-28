@@ -1,0 +1,286 @@
+Text Asset
+To add styled text to your videos you can use the Text asset.
+
+This asset makes use of simple, descriptive styling properties giving you complete control over how text within your videos look.
+
+Adding text to your video
+The JSON below will create a text asset within your video using the Clear Sans font with font size of 48px, with a white colour.
+
+{
+    "timeline": {
+        "tracks": [
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "text",
+                            "text": "Welcome to Shotstack",
+                            "font": {
+                                "family": "Clear Sans",
+                                "size": 48,
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "start": 0,
+                        "length": 5
+                    }
+                ]
+            }
+        ]
+    },
+    "output": {
+        "format": "mp4",
+        "resolution": "hd"
+    }
+}
+
+Additional styling options
+In addition to size and color you can set the following properties:
+
+lineHeight: The relative line height compared to the font size
+weight: Defines the thickness of characters in a font. They range from 100 to 900 and provide a way to specify the boldness of the text.
+Line breaks: You can use the newline character \n to add a line break.
+Stroke: The stroke property allows you to add an outline to the text. You can specify the stroke color and width.
+{
+    "timeline": {
+        "tracks": [
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "text",
+                            "text": "Welcome to \n Shotstack",
+                            "font": {
+                                "family": "Clear Sans",
+                                "size": 48,
+                                "color": "#D35400",
+                                "lineHeight": 2.0,
+                                "weight": 900
+                            },
+                            "stroke": {
+                                "color": "#ff0000",
+                                "width": 5
+                            }
+                        },
+                        "start": 0,
+                        "length": 5
+                    }
+                ]
+            }
+        ]
+    },
+    "output": {
+        "format": "mp4",
+        "resolution": "hd"
+    }
+}
+
+Container dimensions
+By default the container size of the text asset is the full width and height of the viewport. You can customise these dimensions to allow for wrapping of text.
+
+{
+    "timeline": {
+        "tracks": [
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "text",
+                            "text": "Welcome to Shotstack",
+                            "font": {
+                                "family": "Clear Sans",
+                                "size": 48,
+                                "color": "#FFFFFF"
+                            },
+                            "width": 300,
+                            "height": 300
+                        },
+                        "start": 0,
+                        "length": 5
+                    }
+                ]
+            }
+        ]
+    },
+    "output": {
+        "format": "mp4",
+        "resolution": "hd"
+    }
+}
+
+Using custom fonts
+The text asset provides default availability to the following fonts:
+
+Arapey Regular
+Clear Sans
+Didact Gothic
+Montserrat ExtraBold
+Montserrat SemiBold
+OpenSans Bold
+Permanent Marker
+Roboto
+Sue Ellen Francisco
+UniNeue
+WorkSans Light
+To use your own fonts, add a link to the OTF or TTF font file to the fonts array in the timeline, and then reference them in the font property.
+
+{
+    "timeline": {
+        "fonts": [
+            {
+                "src": "https://shotstack-assets.s3.amazonaws.com/fonts/Cousine.ttf"
+            }
+        ],
+        "tracks": [
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "text",
+                            "text": "Welcome to Shotstack",
+                            "font": {
+                                "family": "Cousine",
+                                "size": 48,
+                                "color": "#FFFFFF"
+                            }
+                        },
+                        "start": 0,
+                        "length": 5
+                    }
+                ]
+            }
+        ]
+    },
+    "output": {
+        "format": "mp4",
+        "resolution": "hd"
+    }
+}
+
+For your convenience we have made a number of additional fonts available to reference.
+
+Background
+You can change the background color of the text asset by adding the color property to the background attribute. You can also add padding, opacity and border-radius.
+
+{
+    "timeline": {
+        "tracks": [
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "text",
+                            "text": "Welcome to Shotstack",
+                            "font": {
+                                "family": "Clear Sans",
+                                "size": 48,
+                                "color": "#FFFFFF"
+                            },
+                            "background": {
+                                "color": "#0062ff",
+                                "borderRadius": 50,
+                                "padding": 5,
+                                "opacity": 0.5
+                            },
+                            "width": 300,
+                            "height": 300
+                        },
+                        "start": 0,
+                        "length": 5
+                    }
+                ]
+            }
+        ]
+    },
+    "output": {
+        "format": "mp4",
+        "resolution": "hd"
+    }
+}
+
+Alignment
+You can align your text in two ways; horizontally and vertically.
+
+Horizontal alignment
+The horizontal alignment property is used to align your text on the horizontal axis of the Text asset container, similar to how you would normally align text in a word processor.
+
+You can horizontally align your text left, center and right.
+
+{
+    "timeline": {
+        "background": "#FFFFFF",
+        "tracks": [
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "text",
+                            "text": "Welcome to Shotstack",
+                            "font": {
+                                "family": "Clear Sans",
+                                "size": 48,
+                                "color": "#FFFFFF"
+                            },
+                            "background": {
+                                "color": "#3498db"
+                            },
+                            "alignment": {
+                                "horizontal": "left"
+                            },
+                            "width": 300,
+                            "height": 300
+                        },
+                        "start": 0,
+                        "length": 5
+                    }
+                ]
+            }
+        ]
+    },
+    "output": {
+        "format": "mp4",
+        "resolution": "hd"
+    }
+}
+
+Vertical alignment
+The vertical alignment property is used to align your text on the vertical axis. This is helpful to align your text to the top or bottom of the container.
+
+You can horizontally align your text top, center and bottom.
+
+{
+    "timeline": {
+        "background": "#FFFFFF",
+        "tracks": [
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "text",
+                            "text": "Welcome to Shotstack",
+                            "font": {
+                                "family": "Clear Sans",
+                                "size": 48,
+                                "color": "#FFFFFF"
+                            },
+                            "background": {
+                                "color": "#3498db"
+                            },
+                            "alignment": {
+                                "vertical": "top"
+                            },
+                            "width": 300,
+                            "height": 300
+                        },
+                        "start": 0,
+                        "length": 5
+                    }
+                ]
+            }
+        ]
+    },
+    "output": {
+        "format": "mp4",
+        "resolution": "hd"
+    }
+}

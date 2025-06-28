@@ -1,0 +1,228 @@
+Animations
+Shotstack provides a comprehensive system for creating smooth transitions (known as tweening) between keyframes in your video clips.
+
+Tweening with Shotstack
+Shotstack's tweening framework allows developers to create animations by specifying how properties change over time. The core of this system is the use of arrays to define animation keyframes.
+
+Instead of using a single start and end point, developers can create complex animations by defining multiple keyframe segments for a given property. Each segment specifies a start value (the initial state), end value (the final state), start time (when the animation starts), duration (how long the animation lasts), and interpolation method (how the values transition from start to end).
+
+This approach enables the creation of nuanced, multi-stage animations for properties such as position and scale, all within a straightforward, array-based structure.
+
+We currently support tweening for the following properties:
+
+Opacity: Animate the transparency of a clip.
+Offset: Control the x and y position of a clip.
+Rotation: Animate the rotation of a clip
+Skew: Control the horizontal and vertical shearing effect
+Volume: Animate the audio volume of a clip.
+Animating a single property
+You can animate movement by adding an array with tweening properties to the property you wish to animate.
+
+Animate position
+{
+    "timeline": {
+        "tracks": [
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "https://shotstack-assets.s3.amazonaws.com/logos/shotstack/small/icon.png"
+                        },
+                        "start": 0,
+                        "length": 5,
+                        "fit": "none",
+                        "offset": {
+                            "x": [
+                                {
+                                    "from": -1,
+                                    "to": 0,
+                                    "start": 0,
+                                    "length": 2.5
+                                }
+                            ],
+                            "y": [
+                                {
+                                    "from": 0,
+                                    "to": 1,
+                                    "start": 2.5,
+                                    "length": 2.5
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "output": {
+        "format": "mp4",
+        "size": {
+            "width": 1280,
+            "height": 720
+        }
+    }
+}
+
+
+Animate multiple properties
+You can add multiple tweening combinations to create complex animations.
+
+{
+    "timeline": {
+        "tracks": [
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "image",
+                            "src": "https://shotstack-assets.s3.amazonaws.com/logos/shotstack/small/icon.png"
+                        },
+                        "start": 0,
+                        "length": 5,
+                        "fit": "none",
+                        "opacity": [
+                            {
+                                "from": 0,
+                                "to": 1,
+                                "start": 0,
+                                "length": 5
+                            }
+                        ],
+                        "offset": {
+                            "x": [
+                                {
+                                    "from": -1,
+                                    "to": 0,
+                                    "start": 0,
+                                    "length": 2.5
+                                }
+                            ],
+                            "y": [
+                                {
+                                    "from": 0,
+                                    "to": 1,
+                                    "start": 2.5,
+                                    "length": 2.5
+                                }
+                            ]
+                        },
+                        "transform": {
+                            "rotate": {
+                                "angle": [
+                                    {
+                                        "from": 0,
+                                        "to": 360,
+                                        "start": 0,
+                                        "length": 2.5
+                                    },
+                                    {
+                                        "from": 360,
+                                        "to": 0,
+                                        "start": 2.5,
+                                        "length": 2.5
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "output": {
+        "format": "mp4",
+        "size": {
+            "width": 1280,
+            "height": 720
+        }
+    }
+}
+
+
+Interpolation methods
+The default interpolation method is linear, producing a constant rate of change. For more complex effects, you can use a bezier curve with easings.
+
+{
+    "output": {
+        "format": "mp4",
+        "fps": 60,
+        "size": {
+            "width": 1280,
+            "height": 720
+        }
+    },
+    "timeline": {
+        "tracks": [
+            {
+                "clips": [
+                    {
+                        "start": 0,
+                        "length": 5,
+                        "fit": "none",
+                        "asset": {
+                            "type": "image",
+                            "src": "https://shotstack-assets.s3.amazonaws.com/logos/shotstack/small/icon.png"
+                        },
+                        "offset": {
+                            "x": [
+                                {
+                                    "start": 0,
+                                    "length": 2.5,
+                                    "from": -1,
+                                    "interpolation": "bezier",
+                                    "to": 0,
+                                    "easing": "easeInOutQuart"
+                                }
+                            ],
+                            "y": [
+                                {
+                                    "start": 2.5,
+                                    "length": 2.5,
+                                    "from": 0,
+                                    "interpolation": "bezier",
+                                    "to": 1,
+                                    "easing": "easeInOutQuart"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
+
+
+Easings
+The easings available are:
+
+Easing Type	Description
+ease	Smooth transition with a gradual acceleration and deceleration.
+easeIn	Starts slowly, then speeds up.
+easeOut	Starts quickly, then slows down.
+easeInOut	Starts and ends slowly, with a faster middle section.
+easeInQuad	Speeds up at a steady rate from the start.
+easeOutQuad	Slows down steadily towards the end.
+easeInOutQuad	Gradual speed up, then gradual slow down.
+easeInCubic	Accelerates faster than easeInQuad, for a stronger start.
+easeOutCubic	Decelerates faster than easeOutQuad, for a stronger finish.
+easeInOutCubic	Strong acceleration at the start, smooth middle, strong deceleration at the end.
+easeInQuart	Even stronger acceleration at the start, for a very quick takeoff.
+easeOutQuart	Even stronger deceleration at the end, for a very smooth stop.
+easeInOutQuart	Quick start, steady middle, smooth stop.
+easeInQuint	Extremely fast start, used for dramatic effects.
+easeOutQuint	Extremely smooth stop, used for dramatic effects.
+easeInOutQuint	Very fast start and very smooth stop.
+easeInSine	Gentle acceleration, like easing into a swing.
+easeOutSine	Gentle deceleration, like easing out of a swing.
+easeInOutSine	Gentle start and end, like a smooth pendulum swing.
+easeInExpo	Starts slowly but speeds up dramatically, like an explosion.
+easeOutExpo	Starts fast then slows down dramatically, like something settling.
+easeInOutExpo	Starts and ends dramatically, for a very dynamic effect.
+easeInCirc	Starts slow and curves quickly into motion, like rolling a ball.
+easeOutCirc	Starts quickly and slows down in a circular motion, like a ball stopping.
+easeInOutCirc	Curves into motion, speeds up, then curves to a stop.
+easeInBack	Starts by pulling back slightly before speeding up.
+easeOutBack	Overshoots the end slightly, then settles back.
+easeInOutBack	Pulls back at the start, speeds up, overshoots the end, then settles back.

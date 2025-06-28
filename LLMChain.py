@@ -225,7 +225,7 @@ class TextGroqLink(BaseLLMLink):
 
 class JSONGroqLink(TextGroqLink):
 
-    # Overiding the forward function of JSONGroqLink
+    # Overiding the forward function of TextGroqLink
     def forward(self, _prompt: str) -> dict:
 
         message_to_send: dict = {
@@ -253,7 +253,7 @@ class JSONGroqLink(TextGroqLink):
                 if size_diff > 0:
                     del self.memory[1 : 1 + size_diff]
 
-        return json.loads(response_message.content)
+        return response_message.content
 
 
 class VideoGeminiLink(BaseLLMLink):

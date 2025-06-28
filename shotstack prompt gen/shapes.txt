@@ -1,0 +1,283 @@
+Shape Asset
+To add shapes to your videos you can use the Shape asset.
+
+This asset allows you to add three basic shapes to your videos:
+
+Line
+Square
+Circle
+Adding a line to your video
+The JSON below will add a line with a black fill, a 600px length and a 5px thickness:
+
+{
+    "timeline": {
+        "background": "#ffffff",
+        "tracks": [
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "shape",
+                            "shape": "line",
+                            "line": {
+                                "length": 600,
+                                "thickness": 5
+                            },
+                            "fill": {
+                                "color": "#000000"
+                            }
+                        },
+                        "start": 0,
+                        "length": "auto"
+                    }
+                ]
+            }
+        ]
+    },
+    "output": {
+        "format": "mp4",
+        "size": {
+            "width": 1024,
+            "height": 576
+        }
+    }
+}
+
+Additional line styling options
+Additionally you can set stroke and opacity on a line asset:
+
+{
+    "timeline": {
+        "background": "#ffffff",
+        "tracks": [
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "shape",
+                            "shape": "line",
+                            "fill": {
+                                "color": "#B3E5FC",
+                                "opacity": 1
+                            },
+                            "stroke": {
+                                "color": "#0288D1",
+                                "width": 5
+                            },
+                            "line": {
+                                "length": 500,
+                                "thickness": 10
+                            }
+                        },
+                        "start": 0,
+                        "length": 5
+                    }
+                ]
+            }
+        ]
+    },
+    "output": {
+        "format": "mp4",
+        "size": {
+            "width": 1024,
+            "height": 576
+        }
+    }
+}
+
+Adding a square to your video
+The JSON below will add a 250px wide square to your video with a black fill.
+
+{
+    "timeline": {
+        "background": "#ffffff",
+        "tracks": [
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "shape",
+                            "shape": "rectangle",
+                            "rectangle": {
+                                "width": 250,
+                                "height": 250
+                            },
+                            "fill": {
+                                "color": "#000000"
+                            }
+                        },
+                        "start": 0,
+                        "length": "auto"
+                    }
+                ]
+            }
+        ]
+    },
+    "output": {
+        "format": "mp4",
+        "size": {
+            "width": 1024,
+            "height": 576
+        }
+    }
+}
+
+Additional square styling options
+Additionally you can set opacity and cornerRadius on a rectangle asset.
+
+{
+    "timeline": {
+        "background": "#ffffff",
+        "tracks": [
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "shape",
+                            "shape": "rectangle",
+                            "fill": {
+                                "color": "#FFF9C4",
+                                "opacity": 1
+                            },
+                            "rectangle": {
+                                "width": 500,
+                                "height": 300,
+                                "cornerRadius": 40
+                            }
+                        },
+                        "start": 0,
+                        "length": 5
+                    }
+                ]
+            }
+        ]
+    },
+    "output": {
+        "format": "mp4",
+        "size": {
+            "width": 1024,
+            "height": 576
+        }
+    }
+}
+
+Adding a circle to your video
+The JSON below will add a circle to your video with a black fill.
+
+{
+    "timeline": {
+        "background": "#ffffff",
+        "tracks": [
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "shape",
+                            "shape": "circle",
+                            "fill": {
+                                "color": "#000000"
+                            },
+                            "circle": {
+                                "radius": 100
+                            }
+                        },
+                        "start": 0,
+                        "length": "auto",
+                        "position": "center"
+                    }
+                ]
+            }
+        ]
+    },
+    "output": {
+        "format": "mp4",
+        "size": {
+            "width": 1024,
+            "height": 576
+        }
+    }
+}
+
+Additional circle styling options
+Additionally you can add a stroke to a circle asset:
+
+{
+    "timeline": {
+        "background": "#ffffff",
+        "tracks": [
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "shape",
+                            "shape": "circle",
+                            "fill": {
+                                "color": "#C5CAE9",
+                                "opacity": 1
+                            },
+                            "stroke": {
+                                "color": "#3949AB",
+                                "width": 10
+                            },
+                            "circle": {
+                                "radius": 200
+                            }
+                        },
+                        "start": 0,
+                        "length": 5
+                    }
+                ]
+            }
+        ]
+    },
+    "output": {
+        "format": "mp4",
+        "size": {
+            "width": 1024,
+            "height": 576
+        }
+    }
+}
+
+Other shapes
+You can use clip transformations to create different shapes such as a diamond:
+
+{
+    "timeline": {
+        "background": "#ffffff",
+        "tracks": [
+            {
+                "clips": [
+                    {
+                        "asset": {
+                            "type": "shape",
+                            "shape": "rectangle",
+                            "fill": {
+                                "color": "#DCEDC8",
+                                "opacity": 1
+                            },
+                            "rectangle": {
+                                "width": 300,
+                                "height": 300
+                            }
+                        },
+                        "start": 0,
+                        "length": 5,
+                        "transform": {
+                            "rotate": {
+                                "angle": 45
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "output": {
+        "format": "mp4",
+        "size": {
+            "width": 1024,
+            "height": 576
+        }
+    }
+}
