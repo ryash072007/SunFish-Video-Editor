@@ -27,9 +27,15 @@ You are not forced nor required to use all features. Just try to make it follow 
 
     * `"asset"`:
 
-      * `"type"`: `"video"`, `"image"`, or `"title"`
-      * `"src"`: A **fully working direct URL** that returns a valid `.mp4`, `.jpg`, or `.png`.
+      * `"type"`: `"video"`, `"image"`, `"title"`, `"shape"`, `"luma"`, `"text"`, or `"html"`
+      * `"src"`: A placeholder string like `"{{VIDEO_URL}}"`, `"{{IMAGE_URL}}"`, etc.
       * `"text"`: (for title clips only) Text content to display.
+      * `"shape"`: (for shape clips) `"line"`, `"square"`, or `"circle"`.
+      * `"line"`: (for line shapes) `{ "length": <number>, "thickness": <number> }`.
+      * `"fill"`: (for shapes) `{ "color": <hex>, "opacity": <number> }`.
+      * `"stroke"`: (for shapes) `{ "color": <hex>, "width": <number> }`.
+      * `"chromaKey"`: (for video clips) `{ "color": <hex>, "threshold": <number>, "halo": <number> }`.
+      * `"luma"`: (for luma matte clips) `{ "src": <image_url> }`.
     * `"start"`: When the clip starts, in seconds.
     * `"length"`: Duration of the clip, in seconds.
     * `"fit"`: `"cover"` (preferred), `"contain"`, or `"crop"` for visuals.
@@ -42,30 +48,6 @@ You are not forced nor required to use all features. Just try to make it follow 
 
 ---
 
-### URL Requirements
-
-> You must always use only the following two asset sources. No exceptions. Make sure the url actually points to the correct asset you are looking for.
-
-#### **Music Source**
-
-* Only use audio tracks from:
-  `https://incompetech.com/music/royalty-free/mp3-royaltyfree/`
-
-  * Example:
-    `"https://incompetech.com/music/royalty-free/mp3-royaltyfree/Sergio%2527s%20Magic%20Dustbin.mp3"`
-
-#### **Image Source**
-
-* Only use stock images from Pixabay:
-  `https://cdn.pixabay.com/`
-
-  * Example:
-    `"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"`
-
-All URLs must be **100% valid** and lead to **working files that Shotstack can download without error**.
-
----
-
 ### Editing Behavior
 
 * You may overlay text using `"title"` clips with `style: "minimal"`.
@@ -74,7 +56,7 @@ All URLs must be **100% valid** and lead to **working files that Shotstack can d
 * For images or overlays, always use only Pixabay image URLs.
 * Keep it minimal unless effects or transitions are explicitly requested.
 * Always include valid `"start"` and `"length"` for all clips.
-* Never use broken or placeholder URLs.
+* Never use broken or placeholder URLs—only use placeholder tokens like `{{VIDEO_URL}}`, `{{IMAGE_URL}}`, etc.
 
 ---
 
@@ -87,7 +69,6 @@ Return only the final JSON object.
 
 ### Example Output
 
-```json
 {
   "timeline": {
     "background": "#000000",
@@ -97,11 +78,13 @@ Return only the final JSON object.
           {
             "asset": {
               "type": "video",
-              "src": "https://example.com/video.mp4"
+              "src": "{{VIDEO_URL}}"
             },
             "start": 0,
             "length": 10,
-            "fit": "cover"
+            "fit": "cover",
+            "transition": { "in": "fade", "out": "fade" },
+            "effect": "zoomIn"
           }
         ]
       },
@@ -128,6 +111,5 @@ Return only the final JSON object.
     }
   }
 }
-```
 
-You are expected to return production-grade, Shotstack-ready JSON that runs without errors. Asset URLs must always be real, direct, and downloadable. No placeholder or broken links are allowed.
+You are expected to return production-grade, Shotstack-ready JSON that runs without errors after valid URLs are substituted in.
