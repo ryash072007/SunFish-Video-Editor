@@ -12,13 +12,24 @@ The Shotstack API expects JSON with this high-level structure:
 {
   "timeline": {
     "background": "#000000",
-    "fonts": [ /* custom font definitions if needed */ ],
+    "fonts": [
+      {
+        "src": "https://fonts.gstatic.com/s/opensans/v27/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1x4gaVc.ttf"  // Only src is allowed, no family property
+      }
+    ],
     "tracks": [ /* array of tracks, each containing clips */ ]
   },
   "output": {
     "format": "mp4",
-    "resolution": "hd", 
-    "size": { "width": x, "height": y } # replace x and y with the actual width and height provided
+    // IMPORTANT: Use EITHER resolution OR size, but NEVER both together
+    // Option 1: Use predefined resolution
+    "resolution": "hd"
+    
+    // Option 2: Use custom dimensions (don't use together with resolution)
+    // "size": { 
+    //   "width": 720, 
+    //   "height": 1280
+    // }
   }
 }
 
@@ -39,7 +50,17 @@ ASSET TYPES:
    }
    ```
 
-2. TEXT: Overlay text and captions
+2. AUDIO: Sound elements (must be used for audio tracks)
+   ```
+   "asset": {
+     "type": "audio",
+     "src": "{{AUDIO_URL}}",
+     "trim": 0,             // Optional start trim in seconds
+     "volume": 1.0          // 0.0 to 1.0
+   }
+   ```
+
+3. TEXT: Overlay text and captions
    ```
    "asset": {
      "type": "text",
@@ -64,7 +85,7 @@ ASSET TYPES:
    }
    ```
 
-3. SHAPE: Geometric shapes (rectangle, circle, line)
+4. SHAPE: Geometric shapes (rectangle, circle, line)
    ```
    "asset": {
      "type": "shape",
@@ -108,12 +129,17 @@ Supported easing functions: ease, easeIn, easeOut, easeInOut, easeInQuad, easeOu
 EFFECTS AND TRANSFORMATIONS:
 Effects can be applied to clips:
 ```
-"filter": "boost",  // boost, contrast, darken, greyscale, lighten, muted, negative
+"filter": "boost",  // Valid options: none, blur, boost, contrast, darken, greyscale, lighten, muted, negative
 "transition": {
   "in": "fade",     // fade, reveal, wipe, slide
   "out": "fade"
 }
 ```
+
+IMPORTANT FILTER NOTES:
+- Filters only accept a single string value (e.g., "boost", "contrast")
+- Do NOT use "filter_settings" or any additional configuration objects for filters
+- All filter customization must be done by selecting the appropriate filter name only
 
 Transformations include:
 ```
@@ -146,6 +172,19 @@ Map the incoming edit_type to appropriate Shotstack properties:
 - audio_ducking: Use volume animations
 - add_background_music/sound_effect: Add audio asset on a new track
 
+IMPORTANT TRACK RULES:
+- Dedicated audio tracks must only contain assets with type "audio"
+- Video tracks should contain assets with type "video"
+- Overlay tracks can contain assets with types "image", "text", or "shape"
+- Make sure to use the correct asset type for each track's purpose
+
+TRACK ORDERING IN SHOTSTACK:
+- Track 0 (bottom-most track): Use ONLY for audio assets. This track MUST contain only assets with "type": "audio"
+- Track 1: Also reserved ONLY for audio assets. This track MUST contain only assets with "type": "audio"
+- Track 2: Typically used for the main video content with "type": "video"
+- Track 3 and above: Use for overlays, text, shapes, and additional elements
+- Remember: In Shotstack, tracks stack from bottom to top (track 0 is at the bottom, higher indices are on top)
+
 FORMAT CONVERSION GUIDELINES:
 1. Convert time formats (HH:MM:SS) to seconds for Shotstack
 2. Parse parameter arrays into appropriate Shotstack properties
@@ -153,5 +192,12 @@ FORMAT CONVERSION GUIDELINES:
 4. Set appropriate clip positioning and timing
 5. Apply animations based on the edit instructions
 6. If you have to use a custom asset (except the base video) like a particular audio, set the `src` of the `audio` asset to `{{AUDIO_URL:name_or_desc_of_audio_that_can_be_searched_and_replaced_here}}`
+
+IMPORTANT FONT NOTES:
+- Font objects in the fonts array MUST ONLY include a "src" property with the URL to the font file
+- DO NOT include a "family" property in font objects - it will cause validation errors
+- The font family name should only be referenced in the text asset's font property
+- To use custom fonts, you can use the placeholder {{FONT_URL:font_family_name}} which will be replaced with an actual font URL
+- Example: "src": "{{FONT_URL:Open Sans}}" will be replaced with the actual URL to the Open Sans font file
 
 Your task is to create a complete, accurate Shotstack API JSON that implements all the requested edits while maintaining proper structure and timing relationships.

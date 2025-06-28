@@ -63,4 +63,4 @@ def upload_video_and_render(video_path, json_path):
         time.sleep(5)
 
 # Run it
-upload_video_and_render("video.mp4", "shotstack_hp.json")
+upload_video_and_render("video.mp4", "shotstack_full.json")
