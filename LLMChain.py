@@ -4,7 +4,7 @@ from google import genai
 import logging
 import types
 import json
-
+from pydantic import BaseModel
 
 logger = logging.getLogger(__name__)
 
@@ -262,30 +262,27 @@ class VideoGeminiLink(BaseLLMLink):
         _client: genai.Client,
         _model: str,
         _system_prompt: str = None,
-        # _use_memory: bool = False,
-        # _memory_size: int = None,
+        _as_json: bool = False,
+        _json_schema: BaseModel = None
     ):
         self.client: genai.Client = _client
         self.model: str = _model
         self.system_prompt: str = _system_prompt
+        self.as_json = _as_json
+        self.json_schema = _json_schema
+        self.config = genai.types.GenerateContentConfig()
 
         logger.info(f"VideoGeminiLink System prompt: {_system_prompt}")
 
-        # self.use_memory: bool = _use_memory
-        # self.memory_size: int = _memory_size
-
-        self.memory: list = []
         if self.system_prompt:
-            self.memory.append({"role": "system", "content": self.system_prompt})
+            self.config.system_instruction = self.system_prompt
+        if self.as_json:
+            self.config.response_mime_type = "application/json"
+            if self.json_schema:
+                self.config.response_schema = list[self.json_schema]
+            else:
+                logger.error("as_json is true but no schema is provided, output may not be completely valid")
 
-        # if not self.use_memory and _memory_size is not None:
-        #     logger.warning(
-        #         "You should not specify memory_size when use_memory is False."
-        #     )
-        # elif self.use_memory and _memory_size is None:
-        #     logger.warning(
-        #         "Using memory but memory_size is not specified. Memory will increase and indefinetely and could hit rate limits fast."
-        #     )
 
     def forward(self, _prompt: str, _video_path: str):
         logger.info(f"VideoGeminiLink PROMPT: {_prompt}")
@@ -301,9 +298,7 @@ class VideoGeminiLink(BaseLLMLink):
         response = self.client.models.generate_content(
             model=self.model,
             contents=[vid_file, _prompt],
-            config=genai.types.GenerateContentConfig(
-                system_instruction=self.system_prompt
-            ),
+            config=self.config,
         )
 
         self.client.files.delete(name=vid_file.name)
