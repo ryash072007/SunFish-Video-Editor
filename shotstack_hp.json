@@ -1,136 +1,101 @@
 [
     {
-        "edit_type": "speed_up",
+        "edit_type": "trim",
         "start_time": "00:00:00",
-        "duration": "00:00:05",
-        "parameters": [
-            "speed_factor",
-            1.2
-        ],
-        "reason": "Accelerate intro pacing",
-        "envision": "Video plays 20% faster at the beginning to grab attention."
-    },
-    {
-        "edit_type": "filter",
-        "start_time": "00:00:00",
-        "duration": "00:00:56",
-        "parameters": [
-            "type",
-            "boost",
-            "intensity",
-            0.3
-        ],
-        "reason": "Enhance visual vibrancy",
-        "envision": "Colors appear more saturated and lively throughout the video."
-    },
-    {
-        "edit_type": "speed_up",
-        "start_time": "00:00:09",
-        "duration": "00:00:05",
-        "parameters": [
-            "speed_factor",
-            1.5
-        ],
-        "reason": "Expedite non-essential action",
-        "envision": "The warm-up set explanation and demonstration play faster."
-    },
-    {
-        "edit_type": "speed_up",
-        "start_time": "00:00:14",
         "duration": "00:00:03",
+        "parameters": [],
+        "reason": "Concise introduction to tips",
+        "envision": "Quick hook to grab viewer attention"
+    },
+    {
+        "edit_type": "trim",
+        "start_time": "00:00:06",
+        "duration": "00:00:03",
+        "parameters": [],
+        "reason": "Introduce first time-saving tip",
+        "envision": "Speaker makes a direct, firm statement for Tip 1"
+    },
+    {
+        "edit_type": "trim",
+        "start_time": "00:00:10",
+        "duration": "00:00:03",
+        "parameters": [],
+        "reason": "Explain warm-up set rationale",
+        "envision": "Clear explanation of warm-up purpose"
+    },
+    {
+        "edit_type": "trim",
+        "start_time": "00:00:14",
+        "duration": "00:00:04",
+        "parameters": [],
+        "reason": "Provide actionable warm-up strategy",
+        "envision": "Speaker demonstrates continuous warm-up sets"
+    },
+    {
+        "edit_type": "trim",
+        "start_time": "00:00:20",
+        "duration": "00:00:03",
+        "parameters": [],
+        "reason": "Highlight time-saving benefit for tip 1",
+        "envision": "Timer graphic appears over speaker showing time saved"
+    },
+    {
+        "edit_type": "trim",
+        "start_time": "00:00:23",
+        "duration": "00:00:02",
+        "parameters": [],
+        "reason": "Introduce second time-saving tip",
+        "envision": "Speaker transitions to new exercise for Tip 2"
+    },
+    {
+        "edit_type": "trim",
+        "start_time": "00:00:26",
+        "duration": "00:00:04",
+        "parameters": [],
+        "reason": "Define separated supersets clearly",
+        "envision": "Speaker explains superset concept concisely"
+    },
+    {
+        "edit_type": "trim",
+        "start_time": "00:00:31",
+        "duration": "00:00:05",
+        "parameters": [],
+        "reason": "Show practical application of supersets",
+        "envision": "Split screen visually demonstrates simultaneous exercises"
+    },
+    {
+        "edit_type": "trim",
+        "start_time": "00:00:36",
+        "duration": "00:00:05",
+        "parameters": [],
+        "reason": "Validate tip with research and show impact",
+        "envision": "Study paper flashes, then time saved graphic for supersets"
+    },
+    {
+        "edit_type": "trim",
+        "start_time": "00:00:42",
+        "duration": "00:00:04",
+        "parameters": [],
+        "reason": "Introduce third time-saving tip",
+        "envision": "Speaker quickly picks up dumbbells to start Tip 3"
+    },
+    {
+        "edit_type": "speed_up",
+        "start_time": "00:00:46",
+        "duration": "00:00:04",
         "parameters": [
             "speed_factor",
             2.0
         ],
-        "reason": "Highlight quick transition between sets",
-        "envision": "Adjusting the weight for the warm-up set happens very quickly."
+        "reason": "Efficiently show machine/barbell setup",
+        "envision": "Fast-motion montage of machine adjustments and barbell loading"
     },
     {
-        "edit_type": "zoom_in",
-        "start_time": "00:00:20",
-        "duration": "00:00:02",
-        "parameters": [
-            "level",
-            1.2
-        ],
-        "reason": "Emphasize time saving metric",
-        "envision": "Screen zooms slightly on the 'TIME SAVED 10:00' text for emphasis."
-    },
-    {
-        "edit_type": "speed_up",
-        "start_time": "00:00:21",
-        "duration": "00:00:02",
-        "parameters": [
-            "speed_factor",
-            1.5
-        ],
-        "reason": "Quicken the closing action of the tip",
-        "envision": "Man's final shoulder press movement speeds up at the end of the first tip."
-    },
-    {
-        "edit_type": "speed_up",
-        "start_time": "00:00:25",
-        "duration": "00:00:05",
-        "parameters": [
-            "speed_factor",
-            1.2
-        ],
-        "reason": "Increase pace of exercise demonstration",
-        "envision": "Tricep pressdown and bicep curl demonstrations play faster."
-    },
-    {
-        "edit_type": "speed_up",
-        "start_time": "00:00:36",
-        "duration": "00:00:01",
-        "parameters": [
-            "speed_factor",
-            1.5
-        ],
-        "reason": "Quicken transition to study overlay",
-        "envision": "Brief moment before the study pop-up speeds up for a snappier feel."
-    },
-    {
-        "edit_type": "zoom_in",
-        "start_time": "00:00:39",
-        "duration": "00:00:02",
-        "parameters": [
-            "level",
-            1.2
-        ],
-        "reason": "Highlight significant time saving",
-        "envision": "Screen zooms slightly on the 'TIME SAVED 25:00' text for impact."
-    },
-    {
-        "edit_type": "speed_up",
-        "start_time": "00:00:45",
-        "duration": "00:00:02",
-        "parameters": [
-            "speed_factor",
-            2.5
-        ],
-        "reason": "Emphasize slowness of barbell setup",
-        "envision": "Barbell loading action plays very fast to highlight its inefficiency."
-    },
-    {
-        "edit_type": "speed_up",
-        "start_time": "00:00:47",
-        "duration": "00:00:03",
-        "parameters": [
-            "speed_factor",
-            2.5
-        ],
-        "reason": "Highlight time wasted on machine setup",
-        "envision": "Machine adjustment and loading plays very fast, emphasizing time saved by dumbbells."
-    },
-    {
-        "edit_type": "speed_up",
-        "start_time": "00:00:53",
-        "duration": "00:00:03",
-        "parameters": [
-            "speed_factor",
-            1.2
-        ],
-        "reason": "Accelerate video conclusion",
-        "envision": "The final few seconds of the video play faster for a sharp ending."
+        "edit_type": "trim",
+        "start_time": "00:00:52",
+        "duration": "00:00:04",
+        "parameters": [],
+        "reason": "Summarize dumbbell advantage for time",
+        "envision": "Speaker with dumbbells, concluding benefits of this approach"
     }
 ]
