@@ -1,6 +1,237 @@
-{"timeline": {"background": "#000000", "fonts": [{"src": "https://fonts.gstatic.com/s/opensans/v27/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1x4gaVc.ttf"}], "tracks": [
-  {"clips": [{"asset": {"type": "audio", "src": "https://cdn.freesound.org/previews/345/345284_6026280-hq.mp3", "trim": 0, "volume": 0.3}, "start": 0, "length": 55, "transition": {"in": "fade", "out": "fade"}}]},
-  {"clips": [{"asset": {"type": "audio", "src": "https://cdn.freesound.org/previews/345/345284_6026280-hq.mp3", "trim": 0, "volume": 0}, "start": 0, "length": 1}]},
-  {"clips": [{"asset": {"type": "video", "src": "{{VIDEO_URL}}", "trim": 2.5, "volume": 1.0, "filter": "contrast"}, "start": 0, "length": 19, "transform": {"scale": 1.0}}, {"asset": {"type": "video", "src": "{{VIDEO_URL}}", "trim": 5, "volume": 1.0, "filter": "contrast", "speed": 1.5}, "start": 14, "length": 3}, {"asset": {"type": "video", "src": "{{VIDEO_URL}}", "trim": 23, "volume": 1.0, "filter": "contrast"}, "start": 27, "length": 14}, {"asset": {"type": "video", "src": "{{VIDEO_URL}}", "trim": 41, "volume": 1.0, "filter": "contrast", "speed": 2.0}, "start": 45, "length": 5}]},
-  {"clips": [{"asset": {"type": "text", "text": "1", "font": {"family": "Open Sans", "size": 80, "color": "#ffffff", "weight": 600, "lineHeight": 1.2}, "background": {"color": "#000000", "opacity": 0.5, "padding": 10, "borderRadius": 5}, "alignment": {"horizontal": "center", "vertical": "center"}}, "start": 5, "length": 1, "opacity": [{"from": 0, "to": 1, "start": 0, "length": 0.5, "interpolation": "bezier", "easing": "easeInOutQuad"}, {"from": 1, "to": 0, "start": 0.5, "length": 0.5, "interpolation": "bezier", "easing": "easeInOutQuad"}]}, {"asset": {"type": "text", "text": "2", "font": {"family": "Open Sans", "size": 80, "color": "#ffffff", "weight": 600, "lineHeight": 1.2}, "background": {"color": "#000000", "opacity": 0.5, "padding": 10, "borderRadius": 5}, "alignment": {"horizontal": "center", "vertical": "center"}}, "start": 23, "length": 1, "opacity": [{"from": 0, "to": 1, "start": 0, "length": 0.5, "interpolation": "bezier", "easing": "easeInOutQuad"}, {"from": 1, "to": 0, "start": 0.5, "length": 0.5, "interpolation": "bezier", "easing": "easeInOutQuad"}]}, {"asset": {"type": "text", "text": "3", "font": {"family": "Open Sans", "size": 80, "color": "#ffffff", "weight": 600, "lineHeight": 1.2}, "background": {"color": "#000000", "opacity": 0.5, "padding": 10, "borderRadius": 5}, "alignment": {"horizontal": "center", "vertical": "center"}}, "start": 41, "length": 1, "opacity": [{"from": 0, "to": 1, "start": 0, "length": 0.5, "interpolation": "bezier", "easing": "easeInOutQuad"}, {"from": 1, "to": 0, "start": 0.5, "length": 0.5, "interpolation": "bezier", "easing": "easeInOutQuad"}]}]}
-]}, "output": {"format": "mp4", "size": {"width": 720, "height": 1280}}}
+{
+  "timeline": {
+    "background": "#000000",
+    "fonts": [
+      {
+        "src": "https://fonts.gstatic.com/s/opensans/v27/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1x4gaVc.ttf"
+      }
+    ],
+    "tracks": [
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "audio",
+              "src": "https://cdn.freesound.org/previews/345/345284_6026280-hq.mp3",
+              "trim": 0,
+              "volume": 0.3
+            },
+            "start": 0,
+            "length": 55,
+            "transition": {
+              "in": "fade",
+              "out": "fade"
+            }
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "audio",
+              "src": "https://cdn.freesound.org/previews/345/345284_6026280-hq.mp3",
+              "trim": 0,
+              "volume": 0
+            },
+            "start": 0,
+            "length": 1
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "video",
+              "src": "{{VIDEO_URL}}",
+              "trim": 2.5,
+              "volume": 1.0,
+              "filter": "contrast"
+            },
+            "start": 0,
+            "length": 19,
+            "transform": {
+              "scale": 1.0
+            }
+          },
+          {
+            "asset": {
+              "type": "video",
+              "src": "{{VIDEO_URL}}",
+              "trim": 5,
+              "volume": 1.0,
+              "filter": "contrast",
+              "speed": 1.5
+            },
+            "start": 14,
+            "length": 3
+          },
+          {
+            "asset": {
+              "type": "video",
+              "src": "{{VIDEO_URL}}",
+              "trim": 23,
+              "volume": 1.0,
+              "filter": "contrast"
+            },
+            "start": 27,
+            "length": 14
+          },
+          {
+            "asset": {
+              "type": "video",
+              "src": "{{VIDEO_URL}}",
+              "trim": 41,
+              "volume": 1.0,
+              "filter": "contrast",
+              "speed": 2.0
+            },
+            "start": 45,
+            "length": 5
+          }
+        ]
+      },
+      {
+        "clips": [
+          {
+            "asset": {
+              "type": "text",
+              "text": "1",
+              "font": {
+                "family": "Open Sans",
+                "size": 80,
+                "color": "#ffffff",
+                "weight": 600,
+                "lineHeight": 1.2
+              },
+              "background": {
+                "color": "#000000",
+                "opacity": 0.5,
+                "padding": 10,
+                "borderRadius": 5
+              },
+              "alignment": {
+                "horizontal": "center",
+                "vertical": "center"
+              }
+            },
+            "start": 5,
+            "length": 1,
+            "opacity": [
+              {
+                "from": 0,
+                "to": 1,
+                "start": 0,
+                "length": 0.5,
+                "interpolation": "bezier",
+                "easing": "easeInOutQuad"
+              },
+              {
+                "from": 1,
+                "to": 0,
+                "start": 0.5,
+                "length": 0.5,
+                "interpolation": "bezier",
+                "easing": "easeInOutQuad"
+              }
+            ]
+          },
+          {
+            "asset": {
+              "type": "text",
+              "text": "2",
+              "font": {
+                "family": "Open Sans",
+                "size": 80,
+                "color": "#ffffff",
+                "weight": 600,
+                "lineHeight": 1.2
+              },
+              "background": {
+                "color": "#000000",
+                "opacity": 0.5,
+                "padding": 10,
+                "borderRadius": 5
+              },
+              "alignment": {
+                "horizontal": "center",
+                "vertical": "center"
+              }
+            },
+            "start": 23,
+            "length": 1,
+            "opacity": [
+              {
+                "from": 0,
+                "to": 1,
+                "start": 0,
+                "length": 0.5,
+                "interpolation": "bezier",
+                "easing": "easeInOutQuad"
+              },
+              {
+                "from": 1,
+                "to": 0,
+                "start": 0.5,
+                "length": 0.5,
+                "interpolation": "bezier",
+                "easing": "easeInOutQuad"
+              }
+            ]
+          },
+          {
+            "asset": {
+              "type": "text",
+              "text": "3",
+              "font": {
+                "family": "Open Sans",
+                "size": 80,
+                "color": "#ffffff",
+                "weight": 600,
+                "lineHeight": 1.2
+              },
+              "background": {
+                "color": "#000000",
+                "opacity": 0.5,
+                "padding": 10,
+                "borderRadius": 5
+              },
+              "alignment": {
+                "horizontal": "center",
+                "vertical": "center"
+              }
+            },
+            "start": 41,
+            "length": 1,
+            "opacity": [
+              {
+                "from": 0,
+                "to": 1,
+                "start": 0,
+                "length": 0.5,
+                "interpolation": "bezier",
+                "easing": "easeInOutQuad"
+              },
+              {
+                "from": 1,
+                "to": 0,
+                "start": 0.5,
+                "length": 0.5,
+                "interpolation": "bezier",
+                "easing": "easeInOutQuad"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "output": {
+    "format": "mp4",
+    "size": {
+      "width": 720,
+      "height": 1280
+    }
+  }
+}
