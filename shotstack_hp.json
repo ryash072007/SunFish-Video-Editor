@@ -1,116 +1,136 @@
 [
     {
-        "edit_type": "color_correction",
+        "edit_type": "speed_up",
         "start_time": "00:00:00",
-        "duration": "00:00:55",
+        "duration": "00:00:05",
         "parameters": [
-            "brightness",
-            "10",
-            "contrast",
-            "15",
-            "saturation",
-            "10"
+            "speed_factor",
+            1.2
         ],
-        "reason": "Enhance visual appeal",
-        "envision": "The video will have slightly brighter, more vibrant colors and deeper blacks for a 'flashy' look."
+        "reason": "Accelerate intro pacing",
+        "envision": "Video plays 20% faster at the beginning to grab attention."
     },
     {
-        "edit_type": "add_background_music",
+        "edit_type": "filter",
         "start_time": "00:00:00",
-        "duration": "00:00:55",
+        "duration": "00:00:56",
         "parameters": [
-            "track_name",
-            "UpbeatWorkoutMix",
-            "volume",
-            "0.3"
+            "type",
+            "boost",
+            "intensity",
+            0.3
         ],
-        "reason": "Increase energy and pacing",
-        "envision": "An energetic, driving background music track will play throughout the video at a low volume."
+        "reason": "Enhance visual vibrancy",
+        "envision": "Colors appear more saturated and lively throughout the video."
     },
     {
-        "edit_type": "trim",
-        "start_time": "00:00:04",
-        "duration": "00:00:01",
+        "edit_type": "speed_up",
+        "start_time": "00:00:09",
+        "duration": "00:00:05",
         "parameters": [
-            "end_time",
-            "00:00:05"
+            "speed_factor",
+            1.5
         ],
-        "reason": "Tighten intro segment",
-        "envision": "The video will cut quickly from the first wide shot to the second to maintain fast pacing."
-    },
-    {
-        "edit_type": "overlay_text",
-        "start_time": "00:00:05",
-        "duration": "00:00:01",
-        "parameters": [
-            "text",
-            "1",
-            "position",
-            "center",
-            "font_size",
-            "80"
-        ],
-        "reason": "Introduce first tip visually",
-        "envision": "A large, bold '1' quickly appears and fades out to mark the start of the first tip."
+        "reason": "Expedite non-essential action",
+        "envision": "The warm-up set explanation and demonstration play faster."
     },
     {
         "edit_type": "speed_up",
         "start_time": "00:00:14",
         "duration": "00:00:03",
         "parameters": [
-            "speed_multiplier",
-            "1.5"
+            "speed_factor",
+            2.0
         ],
-        "reason": "Accelerate machine adjustment",
-        "envision": "The action of the speaker adjusting the machine will play faster to show efficiency."
+        "reason": "Highlight quick transition between sets",
+        "envision": "Adjusting the weight for the warm-up set happens very quickly."
     },
     {
-        "edit_type": "overlay_text",
-        "start_time": "00:00:23",
+        "edit_type": "zoom_in",
+        "start_time": "00:00:20",
+        "duration": "00:00:02",
+        "parameters": [
+            "level",
+            1.2
+        ],
+        "reason": "Emphasize time saving metric",
+        "envision": "Screen zooms slightly on the 'TIME SAVED 10:00' text for emphasis."
+    },
+    {
+        "edit_type": "speed_up",
+        "start_time": "00:00:21",
+        "duration": "00:00:02",
+        "parameters": [
+            "speed_factor",
+            1.5
+        ],
+        "reason": "Quicken the closing action of the tip",
+        "envision": "Man's final shoulder press movement speeds up at the end of the first tip."
+    },
+    {
+        "edit_type": "speed_up",
+        "start_time": "00:00:25",
+        "duration": "00:00:05",
+        "parameters": [
+            "speed_factor",
+            1.2
+        ],
+        "reason": "Increase pace of exercise demonstration",
+        "envision": "Tricep pressdown and bicep curl demonstrations play faster."
+    },
+    {
+        "edit_type": "speed_up",
+        "start_time": "00:00:36",
         "duration": "00:00:01",
         "parameters": [
-            "text",
-            "2",
-            "position",
-            "center",
-            "font_size",
-            "80"
+            "speed_factor",
+            1.5
         ],
-        "reason": "Introduce second tip visually",
-        "envision": "A large, bold '2' quickly appears and fades out to mark the start of the second tip."
+        "reason": "Quicken transition to study overlay",
+        "envision": "Brief moment before the study pop-up speeds up for a snappier feel."
     },
     {
-        "edit_type": "cut",
-        "start_time": "00:00:27",
-        "duration": "00:00:01",
-        "parameters": [],
-        "reason": "Quick transition between exercises",
-        "envision": "The video will sharply cut from the tricep pressdown to the bicep curl demonstration."
-    },
-    {
-        "edit_type": "overlay_text",
-        "start_time": "00:00:41",
-        "duration": "00:00:01",
+        "edit_type": "zoom_in",
+        "start_time": "00:00:39",
+        "duration": "00:00:02",
         "parameters": [
-            "text",
-            "3",
-            "position",
-            "center",
-            "font_size",
-            "80"
+            "level",
+            1.2
         ],
-        "reason": "Introduce third tip visually",
-        "envision": "A large, bold '3' quickly appears and fades out to mark the start of the third tip."
+        "reason": "Highlight significant time saving",
+        "envision": "Screen zooms slightly on the 'TIME SAVED 25:00' text for impact."
     },
     {
         "edit_type": "speed_up",
         "start_time": "00:00:45",
-        "duration": "00:00:05",
+        "duration": "00:00:02",
         "parameters": [
-            "speed_multiplier",
-            "2.0"
+            "speed_factor",
+            2.5
         ],
-        "reason": "Highlight time wasted by traditional setup",
-        "envision": "The sequences of setting up a barbell and adjusting a machine will be greatly sped up."
+        "reason": "Emphasize slowness of barbell setup",
+        "envision": "Barbell loading action plays very fast to highlight its inefficiency."
+    },
+    {
+        "edit_type": "speed_up",
+        "start_time": "00:00:47",
+        "duration": "00:00:03",
+        "parameters": [
+            "speed_factor",
+            2.5
+        ],
+        "reason": "Highlight time wasted on machine setup",
+        "envision": "Machine adjustment and loading plays very fast, emphasizing time saved by dumbbells."
+    },
+    {
+        "edit_type": "speed_up",
+        "start_time": "00:00:53",
+        "duration": "00:00:03",
+        "parameters": [
+            "speed_factor",
+            1.2
+        ],
+        "reason": "Accelerate video conclusion",
+        "envision": "The final few seconds of the video play faster for a sharp ending."
     }
 ]

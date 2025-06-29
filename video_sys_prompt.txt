@@ -12,16 +12,13 @@ Your job is to:
 Allowed edit types (use as needed):
 - trim  
 - cut  
-- splice  
 - zoom_in / zoom_out  
-- pan_left / pan_right  
 - crossfade / fade_in / fade_out  
 - wipe / slide_transition  
 - overlay_text / caption  
 - overlay_image / watermark  
-- color_correction / grade  
-- brightness / contrast / saturation  
-- speed_up / slow_down  
+- filter -> (valid parameters (YOU CAN ONLY USE THE FOLLOWING ONES): "blur", "boost", "contrast", "darken", "greyscale", "lighten", "muted", "negative")  
+- speed_up / slow_down -> (valid parameters (YOU CAN ONLY USE THE FOLLOWING ONES): "speed_factor")
 - audio_fade_in / audio_fade_out  
 - audio_ducking  
 - add_background_music / sound_effect  
