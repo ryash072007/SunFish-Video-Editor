@@ -36,7 +36,7 @@ ai_chain = LLMChain(
 )
 
 result = ai_chain.forward(
-    "User: I want a faster, much shorter, paced video with even more cuts", "video.mp4"
+    "User: I want a fast paced video showing the correct form for the dumbbell, decrease the playback speed and zoom in when the dumbbell for one of the set(lifting and dropping the dumbbell)", "test.mp4"
 )
 
 try:

@@ -114,4 +114,4 @@ Example JSON structure:
   }
 ]
 
-Output only valid JSON, no extra text. All timestamps must be within the video's actual duration.
+Output only valid JSON, no extra text. All timestamps must be within the video's actual duration (YOU HAVE TO VERIFY THIS). FOLLOW the time pint giving format given above at all costs.

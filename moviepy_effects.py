@@ -417,12 +417,27 @@ def trim_and_join(original_clip, trim_segments):
     # Join all segments together
     return concatenate_videoclips(segments)
 
-def apply_edits_from_json(video_path, json_path, output_path):
-    """Apply edits from JSON file to a video."""
+def apply_edits_from_json(video_path, json_path, output_path, fps=None):
+    """
+    Apply edits from JSON file to a video.
+    
+    Args:
+        video_path: Path to the input video file
+        json_path: Path to the JSON file with edit instructions
+        output_path: Path where the output video will be saved
+        fps: Frames per second for the output video (None uses source video fps)
+    """
     # Load the video
     try:
         clip = VideoFileClip(video_path)
         original_clip = clip.copy()  # Keep a copy of the original
+        
+        # Use source fps if not specified
+        if fps is None:
+            fps = clip.fps
+            print(f"Using source video frame rate: {fps} fps")
+        else:
+            print(f"Output will be rendered at {fps} fps")
     except Exception as e:
         print(f"Error loading video file '{video_path}': {str(e)}")
         return False
@@ -454,7 +469,7 @@ def apply_edits_from_json(video_path, json_path, output_path):
             print("No additional operations to apply")
             # Write the final video and return
             try:
-                clip.write_videofile(output_path)
+                clip.write_videofile(output_path, fps=fps)
                 print(f"Successfully created {output_path}")
                 clip.close()
                 return True
@@ -526,7 +541,7 @@ def apply_edits_from_json(video_path, json_path, output_path):
     
     # Write the final video
     try:
-        clip.write_videofile(output_path)
+        clip.write_videofile(output_path, fps=fps)
         print(f"Successfully created {output_path}")
         result = True
     except Exception as e:
@@ -539,23 +554,28 @@ def apply_edits_from_json(video_path, json_path, output_path):
 if __name__ == "__main__":
     import sys
     import os
+    import argparse
     
-    # Default values
-    video_path = "video.mp4"
-    json_path = "shotstack_hp.json"
-    output_path = "output.mp4"
+    # Set up command line argument parser
+    parser = argparse.ArgumentParser(description='Apply video edits from JSON instructions')
+    parser.add_argument('video_path', nargs='?', default='test.mp4', help='Path to input video file')
+    parser.add_argument('json_path', nargs='?', default='shotstack_hp.json', help='Path to JSON edit instructions')
+    parser.add_argument('output_path', nargs='?', default='output.mp4', help='Path for output video')
+    parser.add_argument('--fps', type=float, help='Frames per second for output video (default: same as input)')
     
-    # Check for command-line arguments
-    if len(sys.argv) > 1:
-        video_path = sys.argv[1]
-    if len(sys.argv) > 2:
-        json_path = sys.argv[2]
-    if len(sys.argv) > 3:
-        output_path = sys.argv[3]
+    args = parser.parse_args()
     
     # Check if input files exist
-    if not os.path.exists(video_path):
-        print(f"Error: Input video file '{video_path}' not found")
+    if not os.path.exists(args.video_path):
+        print(f"Error: Input video file '{args.video_path}' not found")
         sys.exit(1)
-
-    success = apply_edits_from_json(video_path, json_path, output_path)
+    
+    if not os.path.exists(args.json_path):
+        print(f"Error: JSON file '{args.json_path}' not found")
+        sys.exit(1)
+    
+    # Apply edits with optional FPS setting
+    success = apply_edits_from_json(args.video_path, args.json_path, args.output_path, args.fps)
+    
+    if not success:
+        sys.exit(1)

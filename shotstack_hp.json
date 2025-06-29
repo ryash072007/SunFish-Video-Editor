@@ -1,101 +1,54 @@
 [
     {
         "edit_type": "trim",
-        "start_time": "00:00:00",
-        "duration": "00:00:03",
+        "start_time": "00:00:19",
+        "duration": "00:00:42",
         "parameters": [],
-        "reason": "Concise introduction to tips",
-        "envision": "Quick hook to grab viewer attention"
-    },
-    {
-        "edit_type": "trim",
-        "start_time": "00:00:06",
-        "duration": "00:00:03",
-        "parameters": [],
-        "reason": "Introduce first time-saving tip",
-        "envision": "Speaker makes a direct, firm statement for Tip 1"
-    },
-    {
-        "edit_type": "trim",
-        "start_time": "00:00:10",
-        "duration": "00:00:03",
-        "parameters": [],
-        "reason": "Explain warm-up set rationale",
-        "envision": "Clear explanation of warm-up purpose"
-    },
-    {
-        "edit_type": "trim",
-        "start_time": "00:00:14",
-        "duration": "00:00:04",
-        "parameters": [],
-        "reason": "Provide actionable warm-up strategy",
-        "envision": "Speaker demonstrates continuous warm-up sets"
-    },
-    {
-        "edit_type": "trim",
-        "start_time": "00:00:20",
-        "duration": "00:00:03",
-        "parameters": [],
-        "reason": "Highlight time-saving benefit for tip 1",
-        "envision": "Timer graphic appears over speaker showing time saved"
-    },
-    {
-        "edit_type": "trim",
-        "start_time": "00:00:23",
-        "duration": "00:00:02",
-        "parameters": [],
-        "reason": "Introduce second time-saving tip",
-        "envision": "Speaker transitions to new exercise for Tip 2"
-    },
-    {
-        "edit_type": "trim",
-        "start_time": "00:00:26",
-        "duration": "00:00:04",
-        "parameters": [],
-        "reason": "Define separated supersets clearly",
-        "envision": "Speaker explains superset concept concisely"
-    },
-    {
-        "edit_type": "trim",
-        "start_time": "00:00:31",
-        "duration": "00:00:05",
-        "parameters": [],
-        "reason": "Show practical application of supersets",
-        "envision": "Split screen visually demonstrates simultaneous exercises"
-    },
-    {
-        "edit_type": "trim",
-        "start_time": "00:00:36",
-        "duration": "00:00:05",
-        "parameters": [],
-        "reason": "Validate tip with research and show impact",
-        "envision": "Study paper flashes, then time saved graphic for supersets"
-    },
-    {
-        "edit_type": "trim",
-        "start_time": "00:00:42",
-        "duration": "00:00:04",
-        "parameters": [],
-        "reason": "Introduce third time-saving tip",
-        "envision": "Speaker quickly picks up dumbbells to start Tip 3"
+        "reason": "Focus on the exercise sequence",
+        "envision": "Video starts when the user is about to begin the exercise and ends after he finishes"
     },
     {
         "edit_type": "speed_up",
-        "start_time": "00:00:46",
-        "duration": "00:00:04",
+        "start_time": "00:00:19",
+        "duration": "00:00:08",
         "parameters": [
             "speed_factor",
-            2.0
+            1.5
         ],
-        "reason": "Efficiently show machine/barbell setup",
-        "envision": "Fast-motion montage of machine adjustments and barbell loading"
+        "reason": "Accelerate initial reps for pacing",
+        "envision": "Initial reps play 50% faster"
     },
     {
-        "edit_type": "trim",
-        "start_time": "00:00:52",
-        "duration": "00:00:04",
-        "parameters": [],
-        "reason": "Summarize dumbbell advantage for time",
-        "envision": "Speaker with dumbbells, concluding benefits of this approach"
+        "edit_type": "slow_down",
+        "start_time": "00:00:27",
+        "duration": "00:00:02",
+        "parameters": [
+            "speed_factor",
+            0.5
+        ],
+        "reason": "Highlight correct form for one repetition",
+        "envision": "The single dumbbell press rep unfolds in slow motion"
+    },
+    {
+        "edit_type": "zoom_in",
+        "start_time": "00:00:27",
+        "duration": "00:00:02",
+        "parameters": [
+            "level",
+            1.3
+        ],
+        "reason": "Emphasize dumbbell movement and form",
+        "envision": "Camera gradually zooms in on the lifter during the slow-motion rep"
+    },
+    {
+        "edit_type": "speed_up",
+        "start_time": "00:00:29",
+        "duration": "00:00:32",
+        "parameters": [
+            "speed_factor",
+            1.5
+        ],
+        "reason": "Accelerate remaining reps for pacing",
+        "envision": "Remaining reps play 50% faster to maintain viewer engagement"
     }
 ]
